@@ -32,6 +32,12 @@ line(playerX - (playerwidth * 0.25f), playerY - halfHeight, playerX + (playerwid
 line(playerX + (playerwidth * 0.25f), playerY - halfHeight, playerX + halfwidth, playerY);
 line(playerX + halfwidth, playerY, playerX + halfwidth, playerY + halfHeight);
 
+//bug
+line(bugX - halfwidth / 2, bugY + halfHeight, bugX + halfwidth / 2, bugY + halfHeight);//base
+line(bugX - halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
+line(bugX + halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
+line(bugX - halfwidth / 4, bugY + bugHeight, bugX - halfwidth / 4, bugY + halfHeight);//left leg
+line(bugX + halfwidth / 4, bugY + bugHeight, bugX + halfwidth / 4, bugY + halfHeight);//right leg
 
   
   
