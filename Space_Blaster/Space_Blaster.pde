@@ -39,6 +39,24 @@ line(bugX + halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
 line(bugX - halfwidth / 4, bugY + bugHeight, bugX - halfwidth / 4, bugY + halfHeight);//left leg
 line(bugX + halfwidth / 4, bugY + bugHeight, bugX + halfwidth / 4, bugY + halfHeight);//right leg
 
-  
+bugX+=random(-5,+5);
+bugY+=random(+1);
+
+if(scorecount>=10)
+{
+  bugY+=random(1,1.01);
+}
+
+
+
+if(bugX<=20)
+{
+  bugX=21;
+}
+
+if(bugX>=480)
+{
+  bugX=479;
+}
   
 }
