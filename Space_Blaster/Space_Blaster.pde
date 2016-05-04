@@ -23,4 +23,16 @@ float scy=30;
 void draw()
 {
   background(0,255,255);
+  
+  //ship
+line(playerX - halfwidth, playerY + halfHeight, playerX + halfwidth, playerY + halfHeight);
+line(playerX - halfwidth, playerY +halfHeight, playerX - halfwidth, playerY);
+line(playerX - halfwidth, playerY, playerX - (playerwidth * 0.25f), playerY - halfHeight);
+line(playerX - (playerwidth * 0.25f), playerY - halfHeight, playerX + (playerwidth * 0.25f), playerY - halfHeight);
+line(playerX + (playerwidth * 0.25f), playerY - halfHeight, playerX + halfwidth, playerY);
+line(playerX + halfwidth, playerY, playerX + halfwidth, playerY + halfHeight);
+
+
+  
+  
 }
