@@ -13,6 +13,12 @@ float playerX;
 float playerY;
 float halfwidth = playerwidth * 0.5f;
 float halfHeight = playerHeight * 0.5f; 
+float bugX;
+float bugY;
+float bugHeight = 20;
+float scorecount=0;
+float scx=10;
+float scy=30;
 
 {
 }
