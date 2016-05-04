@@ -5,9 +5,10 @@ playerX = width / 2;
 playerY = height - (playerHeight * 2);
 bugX = width / 2;
 bugY = bugHeight;
+pic=loadImage("helix.jpg");
 }
 
-
+PImage pic;
 float playerwidth = 50;
 float playerHeight = 30;
 float playerX;
@@ -21,12 +22,14 @@ float scorecount=0;
 float scx=10;
 float scy=30;
 float endscrn=1;
+float speed=2;
 
 
 
 void draw()
 {
-  background(0,255,255);
+  background(pic);
+  stroke(255);
   
 
 //ship
@@ -54,6 +57,36 @@ if(scorecount>=10)
   bugY+=random(1,1.01);
 }
 
+if (scorecount==10)
+{
+  text("Level Up!", 220, height/2);
+}
+
+//test
+
+if(scorecount>=20)
+{
+  bugY+=random(1,1.15);
+  speed=4;
+}
+
+if (scorecount==20)
+{
+  text("Level Up!", 220, height/2);
+}
+
+
+if(scorecount>=30)
+{
+  bugY+=random(1,1.2);
+  speed=8;
+}
+
+if (scorecount==30)
+{
+  text("Level Up!", 220, height/2);
+}
+
 
 
 if(bugX<=20)
@@ -72,12 +105,12 @@ if (keyPressed)
   
 if (key == 'a' && playerX >= 30)
 {
-playerX -=2;
+playerX -=speed;
 }
 
 if (key == 'd' && playerX <= 470)
 {
-playerX +=2;
+playerX +=speed;
 }
 
 if(key ==' ')
