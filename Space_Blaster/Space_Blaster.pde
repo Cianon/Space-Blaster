@@ -20,5 +20,7 @@ float scorecount=0;
 float scx=10;
 float scy=30;
 
+void draw()
 {
+  background(0,255,255);
 }
