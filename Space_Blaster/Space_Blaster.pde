@@ -85,6 +85,39 @@ if(key ==' ' && playerX<=(bugX+15) && key==' '&& playerX>=(bugX-15))
   bugY=10;
   bugX=random(50,450);
 }
+}
+if(bugY>=height/2)
+{
+  text("It's getting closer!", 40,height/2);
+}
+if(bugY>=(height/2)+50)
+{
+  text("Kill it!", 300,(height/2)+50);
+}
+if(bugY>=(height/2)+100)
+{
+  text("OH GOD", 150,(height/2)+100);
+}
+if(bugY>=(height/2)+140)
+{
+  text("NOOOO!", random(100,200),random((height/2)+120,(height/2)+160));
+}
+if(bugY<=20)
+{
+  text("Phew", 220,20);
+}
+  
+if(bugY>=playerY)
+{
+  playerX=1000;
+  playerY=1000;
+  bugX=1000;
+  bugY=1000;
+  scx=1000;
+  scy=1000;
+  text("YOU SUCK", 200,height/2);
+}
+
 
   
 }
