@@ -20,6 +20,7 @@ float bugHeight = 20;
 float scorecount=0;
 float scx=10;
 float scy=30;
+float endscrn=1;
 
 
 
@@ -110,21 +111,24 @@ if(bugY>=(height/2)+140)
 {
   text("NOOOO!", random(100,200),random((height/2)+120,(height/2)+160));
 }
-if(bugY<=20)
-{
-  text("Phew", 220,20);
-}
+
   
 if(bugY>=playerY)
 {
   playerX=1000;
   playerY=1000;
   bugX=1000;
-  bugY=1000;
+  bugY=-10000;
   scx=1000;
   scy=1000;
+  endscrn=2;
+  
+}
+if(endscrn>=2)
+{
   text("YOU SUCK", 200,height/2);
 }
+
 
 
 if (bugY<=10)
