@@ -117,6 +117,17 @@ if(bugY>=playerY)
   scy=1000;
   text("YOU SUCK", 200,height/2);
 }
+if (bugY<=10)
+{
+  scorecount++;
+}
+
+textSize(22);
+text("Score:" +scorecount, scx, scy); 
+fill(random(0,255), random(0,255), random(0,255));
+//if i want something done every second frameCount%60==0
+
+
 
 
   
