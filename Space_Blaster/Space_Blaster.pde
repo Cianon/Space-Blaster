@@ -58,5 +58,33 @@ if(bugX>=480)
 {
   bugX=479;
 }
+
+if (keyPressed)
+{
+  
+  
+if (key == 'a' && playerX >= 30)
+{
+playerX -=2;
+}
+
+if (key == 'd' && playerX <= 470)
+{
+playerX +=2;
+}
+
+if(key ==' ')
+{
+  line(playerX,playerY, playerX,playerY-500);
+  text("Pew Pew", random(playerX-145,playerX+100),random(400,450));
+}
+
+if(key ==' ' && playerX<=(bugX+15) && key==' '&& playerX>=(bugX-15))
+{
+  text("Ouch", random(bugX-40,bugX+20),bugY);
+  bugY=10;
+  bugX=random(50,450);
+}
+
   
 }
