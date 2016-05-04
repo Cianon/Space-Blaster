@@ -6,6 +6,13 @@ playerY = height - (playerHeight * 2);
 bugX = width / 2;
 bugY = bugHeight;
 pic=loadImage("helix.jpg");
+import ddf.minim.*;
+  AudioSnippet music;
+  Minim minim;
+  minim = new Minim(this);
+  music = minim.loadSnippet("music.mp3");
+  music.play();
+  
 }
 
 PImage pic;
@@ -39,12 +46,21 @@ line(playerX - halfwidth, playerY, playerX - (playerwidth * 0.25f), playerY - ha
 line(playerX - (playerwidth * 0.25f), playerY - halfHeight, playerX + (playerwidth * 0.25f), playerY - halfHeight);
 line(playerX + (playerwidth * 0.25f), playerY - halfHeight, playerX + halfwidth, playerY);
 line(playerX + halfwidth, playerY, playerX + halfwidth, playerY + halfHeight);
+line(playerX-15,playerY+15,playerX-15,playerY-30);
+line(playerX+15,playerY+15,playerX+15,playerY-30);
+line(playerX-20,playerY+15,playerX-20,playerY-30);
+line(playerX+20,playerY+15,playerX+20,playerY-30);
+line(playerX+20,playerY-30,playerX+15,playerY-30);
+line(playerX-20,playerY-30,playerX-15,playerY-30);
+
 
 
 //bug
-line(bugX - halfwidth / 2, bugY + halfHeight, bugX + halfwidth / 2, bugY + halfHeight);//base
-line(bugX - halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
-line(bugX + halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
+//line(bugX - halfwidth / 2, bugY + halfHeight, bugX + halfwidth / 2, bugY + halfHeight);//base
+//line(bugX - halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
+//line(bugX + halfwidth / 2, bugY + halfHeight, bugX, bugY - bugHeight / 2);
+ellipse(bugX,bugY, 30, 30);
+ellipse(bugX,bugY-8,7,7);
 line(bugX - halfwidth / 4, bugY + bugHeight, bugX - halfwidth / 4, bugY + halfHeight);//left leg
 line(bugX + halfwidth / 4, bugY + bugHeight, bugX + halfwidth / 4, bugY + halfHeight);//right leg
 
@@ -62,7 +78,7 @@ if (scorecount==10)
   text("Level Up!", 220, height/2);
 }
 
-//test
+
 
 if(scorecount>=20)
 {
@@ -115,7 +131,7 @@ playerX +=speed;
 
 if(key ==' ')
 {
-  line(playerX,playerY, playerX,playerY-500);
+  line(playerX,playerY-15, playerX,playerY-500);
   text("Pew Pew", random(playerX-145,playerX+100),random(400,450));
 }
 
